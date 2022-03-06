@@ -1,0 +1,102 @@
+/* These are the main tags you need to effect */
+#container {
+    display: grid;
+    grid-template-columns: 20% auto;
+  }
+  
+  nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+  }
+  
+  #articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Put your code in the media query below */
+  
+  /* You will need to use
+      display
+      grid-template-columns
+      grid-template-rows
+  */
+  
+  @media (max-width: 700px) {
+    #container {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+    }
+  
+    nav {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      grid-template-rows: auto;
+    }
+  
+    #articles {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+  }
+  
+  /* This code does not need to be changed for the assignment */
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 18px;
+  }
+  
+  div {
+    border: 1px solid black;
+  }
+  
+  #hero-image {
+    display: block;
+    background-color: lightblue;
+    height: 500px;
+    text-align: center;
+  }
+  
+  #hero-image img {
+    width: 100%;
+    display: block;
+  }
+  
+  .blog-post {
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 10px;
+    padding: 10px;
+  }
+  
+  .blog-post img {
+    width: 100%;
+  }
+  
+  nav a {
+    padding: 30px;
+    border: 1px solid black;
+  }
+  
+  nav a:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  @media (min-width: 1201px) {
+    #container {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
